@@ -29,7 +29,7 @@ function displayWeather(city, temperature, humidity, weatherIcon, weatherDescrip
     weatherIconClass.style.backgroundPosition = "center"; 
     weatherIconClass.style.backgroundSize = "cover"; 
     weatherIconClass.style.backgroundRepeat = "no-repeat"; 
-    weatherCardClass.style.gridTemplateRows = '80px 1fr';
+    weatherCardClass.style.gridTemplateRows = '50px 1fr';
     weatherDataSection.style.padding = "1rem";
 
 }   
@@ -51,7 +51,7 @@ async function getWeatherData(cityName) {
     }catch(e){
         console.log(e);
         weatherDataSection.innerHTML = `error try again`;
-        weatherCardClass.style.gridTemplateRows = 'auto auto';
+        weatherCardClass.style.gridTemplateRows = '50px 1fr';
         weatherDataSection.style.padding = "1rem";
     }
 }
