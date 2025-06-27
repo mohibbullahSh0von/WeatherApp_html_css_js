@@ -25,7 +25,7 @@ h1{
     display: grid;
     border-radius: 8px;
     box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.625);
-    grid-template-rows: auto 0fr;
+    grid-template-rows: 50px 0fr;
     transition: grid-template-rows 400ms ease-in-out;
 }
 
