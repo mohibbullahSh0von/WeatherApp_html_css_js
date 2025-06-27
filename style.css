@@ -1,0 +1,118 @@
+*, 
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    color: rgb(67, 68, 69);
+}
+
+
+.weather-card{
+    margin-top: 4rem;
+    background: linear-gradient(180deg, hsl(195, 71%, 66%), orange);
+    display: grid;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.625);
+    grid-template-rows: auto 0fr;
+    transition: grid-template-rows 400ms ease-in-out;
+}
+
+.city-search-section{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.city-search-section input{
+    padding: 8px 12px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+}
+
+
+
+.city-search-section button{
+    padding: 8px 12px;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.8);
+    background-color: hsl(210, 1%, 40%);
+}
+
+.city-search-section button:hover{
+    background-color: hsl(210, 1%, 30%);
+}
+.city-search-section button:active{
+    
+    background-color: hsl(210, 1%, 50%);
+}
+.city-search-section button:active i{
+    transform: scale(.9);
+}
+
+
+
+/* weather data section */
+
+.weather-data-section{
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    display: grid;
+    grid-template-rows: repeat(1,auto);
+    grid-auto-columns: auto;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /* padding: 1rem; */
+}
+
+p{
+    color: hsla(0, 0%, 0%, 0.85);
+}
+
+.city-name{
+    font-size: 1.8rem;
+    /* font-weight: 600; */
+}
+.temperature{
+    font-size: 2.4rem;
+}
+
+.humidity{
+    font-size: 1.2rem;
+}
+
+.weather-icon{
+    height: 160px;
+    width: 160px;
+    background: url("./assets/02d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.weather-description{
+    font-size: 1.2rem;
+}
